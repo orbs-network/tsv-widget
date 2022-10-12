@@ -1,10 +1,10 @@
 .container-tabs {
-    font-family: "Roboto", Arial, serif !important;
-    font-size: 12pt;
+    font-size: 1em;
     display: flex;
     flex-direction: row;
     position: relative;
     height: 100%;
+    text-align: left;
 }
 
 div.CodeMirror {
@@ -47,41 +47,41 @@ div.CodeMirror {
 }
 
 .container-tabs .nav-tabs > div {
-    background-color: #fff;
+    background-color: var(--tsv--file-bg, #fff);
+    color: var(--tsv--file-text, #555);
 }
 
 .container-tabs.dark .nav-tabs > div {
-    border: 1px solid #393b4a;
-    background-color: #393b4a;
-    color: #fff;
+    background-color: var(--tsv--file-bg, #393b4a);
+    color: var(--tsv--file-text, #fff);
 }
 
 .container-tabs .nav-tabs > div:hover {
-    background-color: #efefef;
+    background-color: var(--tsv--file-bg-hover, #efefef);
+    color: var(--tsv--file-text-hover, #000);
 }
 
 .container-tabs.dark .nav-tabs > div:hover {
-    border: 1px solid #636680;
-    background-color: #393b4a;
-    color: #fff;
+    background-color: var(--tsv--file-bg-hover, #2a2b36);
+    color: var(--tsv--file-text-hover, #fff);
 }
 
 .container-tabs .nav-tabs > div.active, .container-tabs .nav-tabs > div.active:hover, .container-tabs .nav-tabs > div.active:focus {
-    color: #555;
+    color: var(--tsv--file-active-text, #555);
     cursor: default;
-    background-color: #f3f4f6;
+    background-color: var(--tsv--file-active-bg, #f3f4f6);
 }
 
 .container-tabs.dark .nav-tabs > div.active, .container-tabs.dark .nav-tabs > div.active:hover, .container-tabs.dark .nav-tabs > div.active:focus {
-    border: 1px solid #fff;
-    background-color: #393b4a;
-    color: #fff;
+    background-color: var(--tsv--file-active-bg, #191a20);
+    color: var(--tsv--file-active-text, #fff);
 }
 
 .container-tabs .tab-content {
     margin-left: 2px;
-    max-width: calc(100% - 10rem - 2px); /* including left margin and buttons */
+    width: calc(100% - 10rem - 2px); /* including left margin and buttons */
     height: 100%;
+    overflow-y: auto;
 }
 
 .container-tabs.vertical .tab-content {
@@ -96,7 +96,6 @@ div.CodeMirror {
     width: 100%;
     height: 100%;
     z-index: 9;
-    background: #000;
     opacity: 0.3;
 }
 
@@ -104,10 +103,17 @@ div.CodeMirror {
     display: flex;
 }
 
-.container-tabs.dark .loading-curtain.visible {
-    background: #FFF;
+
+.container-tabs.dark pre {
+    margin: 0;
 }
 
-.cm-host-textarea {
-    visibility: hidden;
+.container-tabs.dark #code {
+    background: var(--tsv--code-background, #282c34);
 }
+
+.container-tabs #code {
+    background: var(--tsv--code-background, #fafafa);
+    font-family: var(--tsv--code-font, inherit);
+}
+
