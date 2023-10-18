@@ -26,7 +26,7 @@
     "sources"
   ],
   "dependencies": {
-    "@types/codemirror": "^5.43.0",
+    "@types/codemirror": "^5.60.11",
     "codemirror": "^5.43.0",
     "codemirror-textmate": "git://github.com/orbs-network/codemirror-textmate",
     "onigasm": "^2.2.5"
