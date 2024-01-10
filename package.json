@@ -48,7 +48,7 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "node-polyfill-webpack-plugin": "^2.0.1",
-    "style-loader": "^3.3.1",
+    "style-loader": "^3.3.4",
     "terser-webpack-plugin": "^5.3.6",
     "ts-loader": "^9.4.1",
     "url-loader": "^4.1.1",
